@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DELAS CARIOCA | Moda feminina com essência e presença</title>
+<meta name="description" content="Conheça a DELAS CARIOCA: moda feminina com elegância tropical, leveza e personalidade. Explore nossa coleção e encontre peças para vestir sua essência.">
+<meta name="theme-color" content="#35432d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --olive:#35432d;
+  --olive-dark:#2a3524;
+  --forest:#0f2a14;
+  --ivory:#f8f6f0;
+  --ivory-2:#efece2;
+  --sand:#ece6da;
+  --sage:#e8eadc;
+  --gold:#e6cf9f;
+  --gold-deep:#b8975a;
+  --ink:#2b2f26;
+  --muted:#6f7466;
+  --line:#d9d5c7;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --script:'Dancing Script',cursive;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ivory);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.container{width:min(1120px,90%);margin:0 auto}
+.eyebrow{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem}
+.script{font-family:var(--script)}
+.ico{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+:focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px}
+
+/* Barra superior */
+.topbar{background:var(--olive);color:var(--gold);font-size:.66rem;letter-spacing:.14em}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;height:22px;width:min(1120px,92%)}
+.topbar .mid{position:absolute;left:50%;transform:translateX(-50%);color:#f1e6c8;font-weight:500;letter-spacing:.06em}
+.topbar .right{margin-left:auto;text-transform:uppercase;opacity:.8}
+@media(max-width:640px){.topbar .right{display:none}.topbar .mid{position:static;transform:none;margin:0 auto}}
+
+/* Header */
+header{position:sticky;top:0;z-index:40;background:var(--ivory);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+header.scrolled{border-color:var(--line);box-shadow:0 6px 24px rgba(40,50,30,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px;width:min(1120px,90%);margin:0 auto}
+.logo{display:flex;align-items:center;gap:.5rem;color:var(--olive)}
+.logo .palm{width:30px;height:34px}
+.logo .txt{display:flex;flex-direction:column;align-items:center;line-height:1}
+.logo .txt b{font-family:var(--serif);font-weight:500;font-size:2rem;letter-spacing:.01em}
+.logo .txt small{font-size:.5rem;letter-spacing:.42em;margin-top:2px;margin-right:-.42em;color:var(--olive)}
+nav ul{display:flex;gap:2rem;list-style:none}
+nav a{font-size:.72rem;color:var(--ink);padding:.5rem 0;border-bottom:1px solid transparent;transition:border-color .25s,color .25s}
+nav a:hover,nav a.active{border-color:var(--olive)}
+.tools{display:flex;gap:1.2rem;align-items:center;font-size:1.15rem}
+.tools button{position:relative;display:flex;color:var(--ink);transition:color .2s}
+.tools button:hover{color:var(--olive)}
+.tools .count{position:absolute;top:-6px;right:-9px;min-width:15px;height:15px;border-radius:8px;background:var(--olive);color:#fff;font-size:.6rem;display:none;align-items:center;justify-content:center;padding:0 3px}
+.tools .count.on{display:flex}
+.searchbar{max-height:0;overflow:hidden;transition:max-height .3s;border-bottom:1px solid transparent}
+.searchbar.open{max-height:70px;border-color:var(--line)}
+.searchbar input{width:min(1120px,90%);display:block;margin:0 auto;height:56px;border:0;background:transparent;font:inherit;font-size:.95rem;outline:none;color:var(--ink)}
+@media(max-width:700px){nav{display:none}.logo .txt b{font-size:1.7rem}}
+
+/* Hero */
+.hero{position:relative;background:var(--forest);overflow:hidden}
+.hero img{width:100%;height:clamp(400px,38.2vw,640px);object-fit:cover;object-position:center;animation:heroIn 1.6s ease both}
+@keyframes heroIn{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:none}}
+.hero .cta{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:2.2rem;background:var(--gold);color:var(--olive);font-size:.74rem;font-weight:500;padding:1.05rem 1.9rem;transition:background .25s,transform .25s;white-space:nowrap}
+.hero .cta:hover{background:#f0dcae;transform:translateX(-50%) translateY(-2px)}
+@media(max-width:700px){.hero img{height:auto;min-height:0;aspect-ratio:auto}.hero .cta{position:static;transform:none;display:flex;justify-content:space-between;margin:0;border-radius:0}.hero .cta:hover{transform:none}}
+
+/* Faixa de valores */
+.values{background:var(--ivory-2);border-bottom:1px solid var(--line)}
+.values .container{display:grid;grid-template-columns:repeat(3,1fr);height:66px;align-items:center}
+.values .v{display:flex;align-items:center;justify-content:center;gap:.8rem;font-size:.68rem;color:var(--ink);height:26px}
+.values .v + .v{border-left:1px solid var(--line)}
+.values .ico{font-size:1.15rem;color:var(--muted)}
+@media(max-width:700px){.values .container{grid-template-columns:1fr;height:auto;padding:1rem 0;gap:.7rem}.values .v+.v{border:0}}
+
+/* Novidades */
+.section{padding:5.5rem 0 3rem}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.head h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.3rem,4.6vw,3.2rem);line-height:1.1;color:var(--ink)}
+.head h2 em{font-family:var(--script);font-style:normal;font-size:1.05em;color:var(--olive)}
+.head p{font-size:.72rem;color:var(--muted);margin-top:.9rem}
+.linkbtn{display:inline-flex;align-items:center;gap:.7rem;font-size:.72rem;padding:.5rem 0;border-bottom:1px solid var(--ink);min-width:110px;justify-content:space-between;transition:gap .25s,color .25s}
+.linkbtn:hover{color:var(--olive);gap:1.2rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.9rem}
+@media(max-width:860px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.card{cursor:pointer;display:flex;flex-direction:column}
+.card.hide{display:none}
+.card .ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--sand)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.card:hover .ph img{transform:scale(1.05)}
+.badge{position:absolute;top:.8rem;left:.8rem;background:#fff;color:var(--olive);font-size:.52rem;letter-spacing:.2em;padding:.35rem .6rem}
+.heart{position:absolute;top:.8rem;right:.8rem;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.82);backdrop-filter:blur(4px);display:grid;place-items:center;font-size:1.05rem;color:var(--ink);transition:background .2s,transform .2s}
+.heart:hover{transform:scale(1.08);background:#fff}
+.heart.on{color:#fff;background:var(--olive)}
+.heart.on svg{fill:currentColor}
+.discover{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:center;align-items:center;gap:.6rem;padding:.95rem;background:rgba(248,246,240,.78);backdrop-filter:blur(8px);font-size:.7rem;transform:translateY(100%);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.card:hover .discover,.card:focus-visible .discover{transform:none}
+@media(hover:none){.discover{transform:none}}
+.card .info{text-align:center;padding:1.3rem .5rem 0}
+.card h3{font-family:var(--serif);font-weight:400;font-size:1.45rem;line-height:1.2;text-transform:none;color:var(--ink)}
+.card .row{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:.8rem;font-size:.68rem;color:var(--muted)}
+.card .row .price{color:var(--ink);font-weight:500}
+.card .row2{display:flex;justify-content:space-between;align-items:center;margin-top:.45rem;padding-top:.7rem;border-top:1px solid var(--line);font-size:.66rem;color:var(--muted)}
+.card .row2 .ver{display:flex;align-items:center;gap:.3rem;color:var(--ink)}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:3rem 0;font-size:.9rem;display:none}
+
+/* Chamada + galeria */
+.callout{padding:2.4rem 0 1.6rem}
+.callout .container{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.callout p{font-size:.72rem;color:var(--muted)}
+.outline{display:inline-flex;align-items:center;gap:2.2rem;border:1px solid var(--muted);padding:.8rem 1.4rem;font-size:.72rem;transition:background .25s,color .25s,border-color .25s}
+.outline:hover{background:var(--olive);color:#fff;border-color:var(--olive)}
+.split{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,1fr);background:#fff}
+@media(max-width:960px){.split{grid-template-columns:1fr}}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:10px;position:relative}
+.gallery button{position:relative;display:block;overflow:hidden;aspect-ratio:3/4;background:var(--sand)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .4s}
+.gallery button:hover img{transform:scale(1.06)}
+.gallery .zoom{position:absolute;inset:auto 10px 10px auto;width:32px;height:32px;border-radius:50%;background:rgba(248,246,240,.85);display:grid;place-items:center;opacity:0;transition:opacity .3s;font-size:1rem}
+.gallery button:hover .zoom{opacity:1}
+.gallery .cap{position:absolute;left:10px;bottom:10px;background:rgba(248,246,240,.9);font-size:.58rem;letter-spacing:.2em;padding:.5rem 1rem;color:var(--muted);z-index:2;pointer-events:none}
+@media(max-width:560px){.gallery{grid-template-columns:1fr 1fr}}
+.essence{background:var(--sand);display:flex;align-items:center;padding:4rem clamp(2rem,6vw,5.5rem)}
+.essence .palm{width:38px;height:44px;color:var(--olive);opacity:.7;margin-bottom:1.6rem}
+.essence h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,4.5vw,3.5rem);line-height:1.08;margin-bottom:1.8rem;color:var(--olive-dark)}
+.essence h2 em{font-style:italic}
+.essence p{font-size:.78rem;color:#5f6455;max-width:44ch;margin-bottom:.9rem}
+.essence .sign{font-family:var(--script);font-size:1.6rem;color:var(--olive);margin:1.6rem 0 1.4rem}
+.essence .linkbtn{border-color:var(--olive);color:var(--olive);gap:1rem;min-width:0}
+
+/* Citação */
+.quote{text-align:center;padding:4.5rem 1rem 5rem}
+.quote .eyebrow{margin-bottom:2rem}
+.quote p{font-family:var(--serif);font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.25;color:var(--ink)}
+.quote p em{display:block}
+.quote .script{display:block;margin-top:1.6rem;font-size:1.3rem;color:var(--muted)}
+
+/* Contato */
+.contact{background:var(--sage)}
+.contact .container{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;padding:2.2rem 0;width:min(920px,90%)}
+.contact h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,3vw,2.1rem);color:var(--olive-dark)}
+.contact .outline{gap:1rem}
+
+/* Footer */
+footer{background:var(--olive);color:#e9e5d2;padding:3.2rem 0 1.6rem}
+.fwrap{width:min(1000px,90%);margin:0 auto}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr .6fr;gap:2rem;align-items:start}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr 1fr}.fgrid .fpalm{display:none}}
+footer .logo{color:#fff;margin-bottom:1.2rem}
+footer .logo small{color:var(--gold)}
+footer .tag{font-size:.68rem;color:var(--gold);line-height:1.9}
+footer .sig{font-family:var(--script);font-size:1.35rem;color:#fff;margin-top:1rem}
+footer h4{font-weight:400;font-size:.58rem;letter-spacing:.24em;color:#aab59a;margin:.4rem 0 1.1rem}
+footer ul{list-style:none;display:grid;gap:.75rem;font-size:.68rem;font-weight:500;color:#fff}
+footer a{display:inline-flex;align-items:center;gap:.4rem;transition:color .2s}
+footer a:hover{color:var(--gold)}
+footer li.soft{font-weight:400;color:#c9d0b3;font-size:.62rem}
+.fpalm{justify-self:end;width:64px;height:76px;color:#8c9a78;opacity:.8}
+.copy{margin-top:2.6rem;padding-top:1.1rem;border-top:1px solid rgba(255,255,255,.18);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.58rem;color:#c9d0b3}
+
+/* Modal translúcido */
+.modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:1.2rem;visibility:hidden;opacity:0;transition:opacity .35s,visibility .35s;background:rgba(36,48,30,.5);backdrop-filter:blur(10px) saturate(1.1);-webkit-backdrop-filter:blur(10px) saturate(1.1)}
+.modal.open{visibility:visible;opacity:1}
+.dialog{position:relative;display:grid;grid-template-columns:minmax(0,.97fr) minmax(0,1fr);width:min(880px,100%);max-height:min(92vh,640px);background:var(--ivory);box-shadow:0 30px 80px rgba(0,0,0,.35);transform:translateY(18px) scale(.985);transition:transform .45s cubic-bezier(.2,.7,.2,1);overflow:hidden}
+.modal.open .dialog{transform:none}
+.dialog .pic{background:var(--sand);min-height:300px;position:relative}
+.dialog .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dialog .txt{padding:2.6rem 2.4rem 2rem;overflow:auto}
+.dialog .crumb{font-size:.58rem;letter-spacing:.2em;color:var(--muted);margin-bottom:1.3rem}
+.dialog h3{font-family:var(--serif);font-weight:400;font-size:2.4rem;line-height:1.1;color:var(--olive-dark)}
+.dialog .price{margin-top:1rem;font-size:.85rem;color:var(--ink)}
+.dialog .desc{margin-top:1.8rem;font-size:.78rem;color:#6b7360}
+.dialog .desc2{margin-top:.9rem;font-size:.7rem;color:var(--ink)}
+.dialog .sizes-wrap{margin-top:1.9rem}
+.dialog .sizes-wrap label{font-size:.7rem;font-weight:500;display:block;margin-bottom:.7rem}
+.sizes{display:flex;gap:.55rem;flex-wrap:wrap}
+.sizes button{width:42px;height:34px;border:1px solid var(--line);font-size:.7rem;transition:all .2s;background:transparent}
+.sizes button:hover{border-color:var(--olive)}
+.sizes button[aria-pressed="true"]{background:var(--olive);color:#fff;border-color:var(--olive)}
+.dialog .buy{margin-top:1.5rem;display:flex;align-items:center;justify-content:center;gap:.7rem;width:100%;height:50px;background:var(--olive);color:#fff;font-size:.72rem;font-weight:500;transition:background .25s}
+.dialog .buy:hover{background:var(--olive-dark)}
+.dialog .note{margin-top:.9rem;font-size:.58rem;color:var(--muted)}
+.dialog .nav2{display:flex;gap:.5rem;margin-top:1.3rem}
+.dialog .nav2 button{font-size:.66rem;color:var(--muted);display:flex;align-items:center;gap:.3rem;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.dialog .nav2 button:hover{color:var(--olive);border-color:var(--olive)}
+.dialog .nav2 .sp{flex:1}
+.close{position:absolute;top:1rem;right:1.1rem;width:32px;height:32px;display:grid;place-items:center;font-size:1.1rem;z-index:3;transition:transform .25s}
+.close:hover{transform:rotate(90deg)}
+@media(max-width:720px){.dialog{grid-template-columns:1fr;max-height:94vh;overflow:auto}.dialog .pic{min-height:0;aspect-ratio:4/4.4}.dialog .txt{overflow:visible;padding:1.6rem 1.4rem 1.6rem}.close{background:rgba(248,246,240,.9);border-radius:50%}}
+
+/* Toast */
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--olive-dark);color:#fff;font-size:.74rem;padding:.8rem 1.3rem;opacity:0;pointer-events:none;transition:all .35s;z-index:200;max-width:90%}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+body.lock{overflow:hidden}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- Ícones -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-palm" viewBox="0 0 40 48"><g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 46 C20 34 19 26 21 18"/><path d="M21 18 C14 10 7 11 3 16 C9 13 15 14 21 18Z"/><path d="M21 18 C16 8 10 5 5 7 C11 8 16 11 21 18Z"/><path d="M21 18 C22 8 26 3 32 3 C27 6 24 10 21 18Z"/><path d="M21 18 C27 10 34 10 38 16 C32 13 26 14 21 18Z"/><path d="M21 18 C30 14 36 20 36 26 C32 20 27 19 21 18Z"/><path d="M21 18 C13 15 6 20 5 26 C9 21 15 19 21 18Z"/></g></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-9.2-9.4C1.7 7.3 3.7 4 7 4c2 0 3.9 1.1 5 3 1.1-1.9 3-3 5-3 3.3 0 5.3 3.3 4.2 6.6C19.5 15.400 12 20 12 20Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+  <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19C5 10 10 5 20 4c0 10-5 15-14 15"/><path d="M5 19 14 10"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3c.6 4.800 2.200 6.400 7 7-4.800.6-6.400 2.200-7 7-.6-4.800-2.200-6.400-7-7 4.800-.6 6.400-2.200 7-7Z"/><path d="M19 15v4M17 17h4"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.500" y="3.500" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.200" cy="6.800" r=".6" fill="currentColor"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+</svg>
+
+<div class="topbar"><div class="container"><span class="mid">Leveza no vestir. Presença no viver.</span><span class="right">Feita para a sua essência</span></div></div>
+
+<header id="header">
+  <div class="nav">
+    <a href="#inicio" class="logo" aria-label="Delas Carioca — início">
+      <svg class="palm" style="stroke:none"><use href="#i-palm"/></svg>
+      <span class="txt"><b>delas</b><small>CARIOCA</small></span>
+    </a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#inicio" class="active" data-nav>Início</a></li>
+        <li><a href="#colecao" data-nav>Coleção</a></li>
+        <li><a href="#essencia" data-nav>Nossa essência</a></li>
+        <li><a href="#contato" data-nav>Contato</a></li>
+      </ul>
+    </nav>
+    <div class="tools">
+      <button id="btnSearch" aria-label="Buscar peças"><svg class="ico"><use href="#i-search"/></svg></button>
+      <button id="btnFavs" aria-label="Ver favoritos"><svg class="ico"><use href="#i-heart"/></svg><span class="count" id="favCount">0</span></button>
+    </div>
+  </div>
+  <div class="searchbar" id="searchbar"><input id="searchInput" type="search" placeholder="Buscar por nome ou cor…" aria-label="Buscar peças"></div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <img src="https://delascari-ucg3yuly.manus.space/images/hero-delascari-reference.png" alt="Delas Carioca Moda Feminina: manequim usando vestido verde em ambiente tropical elegante">
+    <a class="cta" href="#colecao">Conheça nossa coleção <svg class="ico"><use href="#i-arrow"/></svg></a>
+  </section>
+
+  <div class="values">
+    <div class="container">
+      <div class="v"><svg class="ico"><use href="#i-leaf"/></svg>Leveza em cada detalhe</div>
+      <div class="v"><svg class="ico"><use href="#i-leaf"/></svg>Elegância naturalmente sua</div>
+      <div class="v"><svg class="ico"><use href="#i-spark"/></svg>Estilo que permanece</div>
+    </div>
+  </div>
+
+  <section class="section" id="colecao">
+    <div class="container">
+      <div class="head">
+        <div>
+          <p class="eyebrow">Escolhas para o seu momento</p>
+          <h2>Novidades com <em>essência</em></h2>
+          <p>Um novo olhar sobre o que você já ama vestir.</p>
+        </div>
+        <a class="linkbtn" href="#colecao" id="linkAll">Explore a coleção <svg class="ico"><use href="#i-arrow-r"/></svg></a>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty">Nenhuma peça encontrada. Tente outra busca.</p>
+    </div>
+  </section>
+
+  <section class="callout">
+    <div class="container">
+      <p>Do cotidiano aos encontros especiais.</p>
+      <a class="outline" href="#colecao">Encontre o seu look <svg class="ico"><use href="#i-arrow"/></svg></a>
+    </div>
+  </section>
+
+  <section class="split" id="essencia">
+    <div class="gallery" id="gallery"><span class="cap">A LEVEZA É A NOSSA NATUREZA.</span></div>
+    <div class="essence">
+      <div>
+        <svg class="palm" style="stroke:none"><use href="#i-palm"/></svg>
+        <p class="eyebrow">Mais do que vestir</p>
+        <h2>Um jeito leve<br>de ser <em>você.</em></h2>
+        <p>A Delas Carioca é um convite a vestir sua personalidade. Ao encontro da elegância com a naturalidade, da feminilidade com a liberdade.</p>
+        <p>Com uma inspiração tropical e um olhar atemporal, celebramos a beleza de mulheres que fazem presença sem deixar de ser essência.</p>
+        <p class="sign">Delas. Para você.</p>
+        <a class="linkbtn" href="#essencia">Conheça nossa essência <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <p class="eyebrow">Nossa inspiração</p>
+    <p>O sol na pele. A brisa no caminho.<em>A elegância de ser quem se é.</em></p>
+    <span class="script">alma carioca, essência feminina</span>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="container">
+      <div>
+        <p class="eyebrow">Próxima de você</p>
+        <h2>Seu próximo look começa com uma conversa.</h2>
+      </div>
+      <a class="outline" id="contactBtn" href="#" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg> Fale com a gente <svg class="ico"><use href="#i-arrow"/></svg></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="fwrap">
+    <div class="fgrid">
+      <div>
+        <a href="#inicio" class="logo"><svg class="palm" style="stroke:none;width:30px;height:34px"><use href="#i-palm"/></svg><span class="txt"><b style="font-family:var(--serif);font-weight:500;font-size:2rem">delas</b><small>CARIOCA</small></span></a>
+        <p class="tag">Elegância que nasce da leveza.<br>Personalidade que vem de dentro.</p>
+        <p class="sig">Com alma carioca.</p>
+      </div>
+      <div>
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="#colecao">Nossa coleção</a></li>
+          <li><a href="#colecao">Novidades</a></li>
+          <li><a href="#essencia">Nossa essência</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>VAMOS CONVERSAR</h4>
+        <ul>
+          <li><a href="#contato">Atendimento</a></li>
+          <li><a id="footInsta" href="#" target="_blank" rel="noopener">Instagram Direct <svg class="ico"><use href="#i-arrow"/></svg></a></li>
+          <li class="soft">Uma escolha feita com você.</li>
+        </ul>
+      </div>
+      <svg class="fpalm" style="stroke:none"><use href="#i-palm"/></svg>
+    </div>
+    <div class="copy"><span>© 2026 DELAS CARIOCA. Todos os direitos reservados.</span><span>Moda com essência. Estilo com presença.</span></div>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <button class="close" id="mClose" aria-label="Fechar"><svg class="ico"><use href="#i-x"/></svg></button>
+    <div class="pic"><img id="mImg" src="" alt=""></div>
+    <div class="txt">
+      <p class="crumb" id="mCrumb"></p>
+      <h3 id="mTitle"></h3>
+      <p class="price" id="mPrice"></p>
+      <p class="desc" id="mDesc"></p>
+      <p class="desc2" id="mDesc2"></p>
+      <div class="sizes-wrap" id="mSizesWrap">
+        <label id="mSizeLabel">Escolha seu tamanho</label>
+        <div class="sizes" id="mSizes" role="group" aria-labelledby="mSizeLabel"></div>
+      </div>
+      <a class="buy" id="mBuy" href="#" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg> Consultar e comprar pelo Direct <svg class="ico"><use href="#i-arrow"/></svg></a>
+      <p class="note">Peça, fotografia e preço de demonstração. Disponibilidade a confirmar.</p>
+      <div class="nav2">
+        <button id="mPrev"><svg class="ico"><use href="#i-chev-l"/></svg> Anterior</button>
+        <span class="sp"></span>
+        <button id="mNext">Próxima <svg class="ico"><use href="#i-chev"/></svg></button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ====== CONFIGURAÇÃO ====== */
+const INSTAGRAM_USER = "delascarioca";   // troque pelo @ real (sem o @)
+const BASE = "https://delascari-ucg3yuly.manus.space/";
+
+/* Peças da coleção */
+const PRODUCTS = [
+  { id:"professor", name:"O MELHOR PROFESSOR DO MUNDO", price:"para isto não tem preço", color:"Verde-oliva", sizes:["P","M","G"],
+    img:BASE+"professor.jpg", cat:"Destaque", badge:"NOVIDADE",
+    desc:"Uma homenagem a quem inspira, ensina e transforma. Peça de destaque da coleção.",
+    desc2:"Consulte pelo Direct para saber mais." },
+  { id:"oliva", name:"Encanto de Oliva", price:"R$ 150,00", color:"Verde-oliva", sizes:["P","M","G","GG"],
+    img:BASE+"images/encanto-de-oliva.png", cat:"Vestidos", badge:"NOVIDADE",
+    desc:"Vestido longo verde-oliva, com detalhes ornamentais dourados, alças finas e saia fluida. Uma peça que une delicadeza e sofisticação.",
+    desc2:"Ideal para ocasiões especiais, com sandálias delicadas e acessórios discretos para um visual elegante e atemporal." },
+  { id:"mare", name:"Blusa Maré", price:"R$ 179,00", color:"Marfim", sizes:["P","M","G"],
+    img:BASE+"images/look-ivory.jpg", cat:"Blusas", badge:"",
+    desc:"Blusa marfim com mangas delicadas, leve e versátil. Combina com saia oliva para um look editorial.",
+    desc2:"Perfeita do cotidiano aos encontros especiais, com toque fresco e elegante." }
+];
+
+/* Galeria: coloque suas fotos em images/galeria-1.jpg ... galeria-6.jpg (ou troque os links) */
+const FALLBACKS = [BASE+"images/look-ivory.jpg", BASE+"images/hero-fashion.jpg", BASE+"images/encanto-de-oliva.png"];
+const GALLERY = [
+  { src:"images/galeria-1.jpg", name:"Verão em detalhes", desc:"Acessórios naturais e tons terrosos para um dia leve." },
+  { src:"images/galeria-2.jpg", name:"Frescor tropical", desc:"Chapéu de palha, folhas e uma pele iluminada pelo sol." },
+  { src:"images/galeria-3.jpg", name:"Look dourado", desc:"Blusa listrada em tom mel com calça pantalona marfim." },
+  { src:"images/galeria-4.jpg", name:"Azul que dança", desc:"Listras azuis e movimento para dias de brisa." },
+  { src:"images/galeria-5.jpg", name:"Branco atemporal", desc:"Vestido marfim bordado, simples e sofisticado." },
+  { src:"images/galeria-6.jpg", name:"Cores da feira", desc:"Estampas vivas e cestos de palha para o verão." }
+];
+
+/* ====== UTILS ====== */
+const $ = (s, el=document) => el.querySelector(s);
+const ICON = n => `<svg class="ico"><use href="#i-${n}"/></svg>`;
+const igLink = `https://ig.me/m/${INSTAGRAM_USER}`;
+let favs = [];
+try { favs = JSON.parse(localStorage.getItem("delas-favs") || "[]"); } catch(e){}
+const saveFavs = () => { try { localStorage.setItem("delas-favs", JSON.stringify(favs)); } catch(e){} };
+
+function toast(msg){
+  const t = $("#toast"); t.textContent = msg; t.classList.add("on");
+  clearTimeout(toast._t); toast._t = setTimeout(()=>t.classList.remove("on"), 3200);
+}
+
+/* ====== CARDS ====== */
+const grid = $("#grid");
+function renderCards(){
+  grid.innerHTML = PRODUCTS.map((p,i)=>`
+    <article class="card" data-i="${i}" tabindex="0" role="button" aria-label="Ver ${p.name}">
+      <div class="ph">
+        ${p.badge ? `<span class="badge">${p.badge}</span>` : ""}
+        <button class="heart ${favs.includes(p.id)?'on':''}" data-fav="${p.id}" aria-label="Favoritar ${p.name}" aria-pressed="${favs.includes(p.id)}">${ICON("heart")}</button>
+        <img src="${p.img}" alt="${p.name}" loading="lazy">
+        <div class="discover">Descubra a peça ${ICON("arrow")}</div>
+      </div>
+      <div class="info">
+        <h3>${p.name}</h3>
+        <div class="row"><span>${p.color}</span><span class="price">${p.price}</span></div>
+        <div class="row2"><span>${p.sizes.join(" / ")}</span><span class="ver">Ver peça ${ICON("chev")}</span></div>
+      </div>
+    </article>`).join("");
+  updateCount();
+}
+function updateCount(){
+  const c = $("#favCount"); c.textContent = favs.length; c.classList.toggle("on", favs.length>0);
+}
+
+let onlyFavs = false;
+function applyFilter(){
+  const q = $("#searchInput").value.trim().toLowerCase();
+  let shown = 0;
+  document.querySelectorAll(".card").forEach(card=>{
+    const p = PRODUCTS[card.dataset.i];
+    const match = (!q || (p.name+" "+p.color+" "+p.cat).toLowerCase().includes(q)) && (!onlyFavs || favs.includes(p.id));
+    card.classList.toggle("hide", !match); if(match) shown++;
+  });
+  $("#empty").style.display = shown ? "none" : "block";
+  $("#empty").textContent = onlyFavs && !q ? "Você ainda não favoritou nenhuma peça." : "Nenhuma peça encontrada. Tente outra busca.";
+}
+
+grid.addEventListener("click", e=>{
+  const heart = e.target.closest("[data-fav]");
+  if(heart){
+    e.stopPropagation();
+    const id = heart.dataset.fav;
+    favs = favs.includes(id) ? favs.filter(x=>x!==id) : [...favs, id];
+    saveFavs(); heart.classList.toggle("on"); heart.setAttribute("aria-pressed", favs.includes(id)); updateCount(); applyFilter();
+    return;
+  }
+  const card = e.target.closest(".card");
+  if(card) openItem("p", +card.dataset.i);
+});
+grid.addEventListener("keydown", e=>{
+  if((e.key==="Enter"||e.key===" ") && e.target.classList.contains("card")){ e.preventDefault(); openItem("p", +e.target.dataset.i); }
+});
+
+/* ====== GALERIA ====== */
+const gal = $("#gallery");
+GALLERY.forEach((g,i)=>{
+  const b = document.createElement("button");
+  b.setAttribute("aria-label", "Ampliar: "+g.name);
+  b.innerHTML = `<img src="${g.src}" alt="${g.name}" loading="lazy"><span class="zoom">${ICON("plus")}</span>`;
+  b.querySelector("img").onerror = function(){ this.onerror=null; this.src = FALLBACKS[i % FALLBACKS.length]; };
+  b.onclick = ()=>openItem("g", i);
+  gal.appendChild(b);
+});
+
+/* ====== MODAL ====== */
+const modal = $("#modal");
+let cur = {type:"p", i:0}, size = null, lastFocus = null;
+
+function dataOf(type,i){
+  if(type==="p"){ const p = PRODUCTS[i]; return { img:p.img, alt:p.name, crumb:`${p.cat} · DELAS CARIOCA`, title:p.name, price:p.price, desc:p.desc, desc2:p.desc2, sizes:p.sizes }; }
+  const g = GALLERY[i]; const img = document.querySelectorAll("#gallery img")[i];
+  return { img: img ? img.currentSrc || img.src : g.src, alt:g.name, crumb:"Inspiração · DELAS CARIOCA", title:g.name, price:"", desc:g.desc, desc2:"Gostou do estilo? Fale com a gente e encontre peças parecidas.", sizes:null };
+}
+function fillModal(){
+  const d = dataOf(cur.type, cur.i); size = null;
+  $("#mImg").src = d.img; $("#mImg").alt = d.alt;
+  $("#mCrumb").textContent = d.crumb; $("#mTitle").textContent = d.title;
+  $("#mPrice").textContent = d.price; $("#mPrice").style.display = d.price ? "block" : "none";
+  $("#mDesc").textContent = d.desc; $("#mDesc2").textContent = d.desc2;
+  $("#mSizesWrap").style.display = d.sizes ? "block" : "none";
+  const s = $("#mSizes"); s.innerHTML = "";
+  (d.sizes||[]).forEach(z=>{
+    const b = document.createElement("button"); b.textContent = z; b.setAttribute("aria-pressed","false");
+    b.onclick = ()=>{ size = z; s.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed", x===b)); };
+    s.appendChild(b);
+  });
+  $("#mBuy").href = igLink;
+}
+function openItem(type,i){
+  cur = {type,i}; fillModal();
+  lastFocus = document.activeElement;
+  modal.classList.add("open"); modal.setAttribute("aria-hidden","false"); document.body.classList.add("lock");
+  setTimeout(()=>$("#mClose").focus(), 50);
+}
+function closeModal(){
+  modal.classList.remove("open"); modal.setAttribute("aria-hidden","true"); document.body.classList.remove("lock");
+  if(lastFocus) lastFocus.focus();
+}
+function step(dir){
+  const list = cur.type==="p" ? PRODUCTS : GALLERY;
+  cur.i = (cur.i + dir + list.length) % list.length; fillModal();
+}
+$("#mClose").onclick = closeModal;
+$("#mPrev").onclick = ()=>step(-1);
+$("#mNext").onclick = ()=>step(1);
+modal.addEventListener("click", e=>{ if(e.target===modal) closeModal(); });
+document.addEventListener("keydown", e=>{
+  if(!modal.classList.contains("open")) return;
+  if(e.key==="Escape") closeModal();
+  if(e.key==="ArrowLeft") step(-1);
+  if(e.key==="ArrowRight") step(1);
+  if(e.key==="Tab"){
+    const f = [...modal.querySelectorAll("button,a[href]")].filter(x=>x.offsetParent!==null);
+    const first = f[0], last = f[f.length-1];
+    if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
+  }
+});
+/* Botão do Direct: exige tamanho e copia a mensagem pronta */
+$("#mBuy").addEventListener("click", e=>{
+  const d = dataOf(cur.type, cur.i);
+  if(d.sizes && !size){ e.preventDefault(); toast("Escolha um tamanho para continuar."); return; }
+  const msg = d.sizes ? `Olá! Tenho interesse na peça "${d.title}", tamanho ${size}. Ainda está disponível?` : `Olá! Gostei do look "${d.title}". Podem me ajudar?`;
+  try { navigator.clipboard.writeText(msg); toast("Mensagem copiada. Cole no Direct para enviar."); } catch(err){}
+});
+
+/* ====== HEADER / BUSCA / FAVORITOS ====== */
+const header = $("#header");
+addEventListener("scroll", ()=>header.classList.toggle("scrolled", scrollY>10), {passive:true});
+$("#btnSearch").onclick = ()=>{
+  const bar = $("#searchbar"); bar.classList.toggle("open");
+  if(bar.classList.contains("open")){ $("#searchInput").focus(); document.getElementById("colecao").scrollIntoView({behavior:"smooth"}); }
+  else { $("#searchInput").value = ""; applyFilter(); }
+};
+$("#searchInput").addEventListener("input", applyFilter);
+$("#btnFavs").onclick = ()=>{
+  onlyFavs = !onlyFavs; applyFilter();
+  toast(onlyFavs ? "Mostrando apenas seus favoritos." : "Mostrando toda a coleção.");
+  document.getElementById("colecao").scrollIntoView({behavior:"smooth"});
+};
+$("#linkAll").addEventListener("click", ()=>{ onlyFavs = false; $("#searchInput").value=""; applyFilter(); });
+
+/* Link ativo do menu */
+const secs = ["inicio","colecao","essencia","contato"].map(id=>document.getElementById(id));
+const links = document.querySelectorAll("[data-nav]");
+const spy = new IntersectionObserver(es=>es.forEach(en=>{
+  if(en.isIntersecting) links.forEach(a=>a.classList.toggle("active", a.getAttribute("href")==="#"+en.target.id));
+}),{rootMargin:"-45% 0px -50% 0px"});
+secs.forEach(s=>spy.observe(s));
+
+/* Instagram */
+$("#contactBtn").href = igLink; $("#footInsta").href = igLink;
+
+renderCards(); applyFilter();
+</script>
+</body>
+</html>
