@@ -130,6 +130,7 @@ nav a:hover,nav a.active{border-color:var(--olive)}
 .gallery button:hover img{transform:scale(1.06)}
 .gallery .zoom{position:absolute;inset:auto 10px 10px auto;width:32px;height:32px;border-radius:50%;background:rgba(248,246,240,.85);display:grid;place-items:center;opacity:0;transition:opacity .3s;font-size:1rem}
 .gallery button:hover .zoom{opacity:1}
+.gallery .wide{grid-column:span 2;aspect-ratio:auto;min-height:200px}
 .gallery .cap{position:absolute;left:10px;bottom:10px;background:rgba(248,246,240,.9);font-size:.58rem;letter-spacing:.2em;padding:.5rem 1rem;color:var(--muted);z-index:2;pointer-events:none}
 @media(max-width:560px){.gallery{grid-template-columns:1fr 1fr}}
 .essence{background:var(--sand);display:flex;align-items:center;padding:4rem clamp(2rem,6vw,5.5rem)}
@@ -251,7 +252,7 @@ body.lock{overflow:hidden}
 
 <main id="inicio">
   <section class="hero">
-    <img src="https://delascari-ucg3yuly.manus.space/images/hero-delascari-reference.png" alt="Delas Carioca Moda Feminina: manequim usando vestido verde em ambiente tropical elegante">
+    <img src="images/hero-delascari-reference.png" alt="Delas Carioca Moda Feminina: manequim usando vestido verde em ambiente tropical elegante">
     <a class="cta" href="#colecao">Conheça nossa coleção <svg class="ico"><use href="#i-arrow"/></svg></a>
   </section>
 
@@ -273,7 +274,44 @@ body.lock{overflow:hidden}
         </div>
         <a class="linkbtn" href="#colecao" id="linkAll">Explore a coleção <svg class="ico"><use href="#i-arrow-r"/></svg></a>
       </div>
-      <div class="grid" id="grid"></div>
+      <div class="grid" id="grid">
+      <article class="card" data-id="professor" data-cat="Destaque" data-price="para isto não tem preço" data-color="Verde-oliva" data-sizes="P,M,G" data-desc="Existem certas coisas que o dinheiro não compra. Para todas as outras existe Marcial Daltro. professor" data-desc2="Consulte pelo Direct para saber mais." tabindex="0" role="button" aria-label="Ver O MELHOR PROFESSOR DO MUNDO">
+        <div class="ph">
+          <span class="badge">Professor</span><button class="heart" data-fav="professor" aria-label="Favoritar O MELHOR PROFESSOR DO MUNDO" aria-pressed="false"><svg class="ico"><use href="#i-heart"/></svg></button>
+          <img src="images/professor.jpg" alt="Professor sorrindo diante de um quadro branco" loading="lazy">
+          <div class="discover">Descubra a peça <svg class="ico"><use href="#i-arrow"/></svg></div>
+        </div>
+        <div class="info">
+          <h3>O MELHOR PROFESSOR DO MUNDO</h3>
+          <div class="row"><span>Professor</span><span class="price">para isto não tem preço</span></div>
+          <div class="row2"><span>P / M / G</span><span class="ver">Ver peça <svg class="ico"><use href="#i-chev"/></svg></span></div>
+        </div>
+      </article>
+      <article class="card" data-id="oliva" data-cat="Vestidos" data-price="R$ 150,00" data-color="Verde-oliva" data-sizes="P,M,G,GG" data-desc="Vestido longo verde-oliva, com detalhes ornamentais dourados, alças finas e saia fluida. Uma peça que une delicadeza e sofisticação." data-desc2="Ideal para ocasiões especiais, com sandálias delicadas e acessórios discretos para um visual elegante e atemporal." tabindex="0" role="button" aria-label="Ver Encanto de Oliva">
+        <div class="ph">
+          <span class="badge">NOVIDADE</span><button class="heart" data-fav="oliva" aria-label="Favoritar Encanto de Oliva" aria-pressed="false"><svg class="ico"><use href="#i-heart"/></svg></button>
+          <img src="images/encanto-de-oliva.png" alt="Vestido longo verde-oliva com bordados dourados" loading="lazy">
+          <div class="discover">Descubra a peça <svg class="ico"><use href="#i-arrow"/></svg></div>
+        </div>
+        <div class="info">
+          <h3>Encanto de Oliva</h3>
+          <div class="row"><span>Verde-oliva</span><span class="price">R$ 150,00</span></div>
+          <div class="row2"><span>P / M / G / GG</span><span class="ver">Ver peça <svg class="ico"><use href="#i-chev"/></svg></span></div>
+        </div>
+      </article>
+      <article class="card" data-id="mare" data-cat="Blusas" data-price="R$ 179,00" data-color="Marfim" data-sizes="P,M,G" data-desc="Fundo creme com delicadas flores vermelhas, trazendo uma proposta romântica e feminina. Uma peça leve, charmosa e cheia de personalidade." tabindex="0" role="button" aria-label="Ver Blusa Maré">
+        <div class="ph">
+          <button class="heart" data-fav="mare" aria-label="Favoritar Romance Floral" aria-pressed="false"><svg class="ico"><use href="#i-heart"/></svg></button>
+          <img src="images/Romance-floral.jpeg" alt="Blusa marfim com mangas delicadas" loading="lazy">
+          <div class="discover">Descubra a peça <svg class="ico"><use href="#i-arrow"/></svg></div>
+        </div>
+        <div class="info">
+          <h3>Romance Floral</h3>
+          <div class="row"><span>Marfim</span><span class="price">R$ 179,00</span></div>
+          <div class="row2"><span>P / M / G</span><span class="ver">Ver peça <svg class="ico"><use href="#i-chev"/></svg></span></div>
+        </div>
+      </article>
+      </div>
       <p class="empty" id="empty">Nenhuma peça encontrada. Tente outra busca.</p>
     </div>
   </section>
@@ -286,7 +324,13 @@ body.lock{overflow:hidden}
   </section>
 
   <section class="split" id="essencia">
-    <div class="gallery" id="gallery"><span class="cap">A LEVEZA É A NOSSA NATUREZA.</span></div>
+    <div class="gallery" id="gallery"><span class="cap">A LEVEZA É A NOSSA NATUREZA.</span>
+      <button data-n="Verão em detalhes" data-desc="Acessórios naturais e tons terrosos para um dia leve." aria-label="Ampliar: Verão em detalhes"><img src="images/brancorosa.png" alt="Verão em detalhes" loading="lazy"><span class="zoom"><svg class="ico"><use href="#i-plus"/></svg></span></button>
+      <button data-n="Frescor tropical" data-desc="Chapéu de palha, folhas e uma pele iluminada pelo sol." aria-label="Ampliar: Frescor tropical"><img src="images/fresco-tropical.jpg" alt="Frescor tropical" loading="lazy"><span class="zoom"><svg class="ico"><use href="#i-plus"/></svg></span></button>
+      <button data-n="Look dourado" data-desc="Blusa listrada em tom mel com calça pantalona marfim." aria-label="Ampliar: Look dourado"><img src="images/dourado2.png" alt="Look dourado" loading="lazy"><span class="zoom"><svg class="ico"><use href="#i-plus"/></svg></span></button>
+      <button data-n="Azul que dança" data-desc="Listras azuis e movimento para dias de brisa." aria-label="Ampliar: Azul que dança"><img src="images/dourado.jpg" alt="Azul que dança" loading="lazy"><span class="zoom"><svg class="ico"><use href="#i-plus"/></svg></span></button>
+      <button class="wide" data-n="Branco atemporal" data-desc="Vestido marfim bordado, simples e sofisticado." aria-label="Ampliar: Branco atemporal"><img src="images/branco-atemporal.png" alt="Branco atemporal" loading="lazy"><span class="zoom"><svg class="ico"><use href="#i-plus"/></svg></span></button>
+    </div>
     <div class="essence">
       <div>
         <svg class="palm" style="stroke:none"><use href="#i-palm"/></svg>
@@ -376,35 +420,14 @@ body.lock{overflow:hidden}
 
 <script>
 /* ====== CONFIGURAÇÃO ====== */
-const INSTAGRAM_USER = "delascarioca";   // troque pelo @ real (sem o @)
-const BASE = "https://delascari-ucg3yuly.manus.space/";
-
-/* Peças da coleção */
-const PRODUCTS = [
-  { id:"professor", name:"O MELHOR PROFESSOR DO MUNDO", price:"para isto não tem preço", color:"Verde-oliva", sizes:["P","M","G"],
-    img:BASE+"professor.jpg", cat:"Destaque", badge:"NOVIDADE",
-    desc:"Uma homenagem a quem inspira, ensina e transforma. Peça de destaque da coleção.",
-    desc2:"Consulte pelo Direct para saber mais." },
-  { id:"oliva", name:"Encanto de Oliva", price:"R$ 150,00", color:"Verde-oliva", sizes:["P","M","G","GG"],
-    img:BASE+"images/encanto-de-oliva.png", cat:"Vestidos", badge:"NOVIDADE",
-    desc:"Vestido longo verde-oliva, com detalhes ornamentais dourados, alças finas e saia fluida. Uma peça que une delicadeza e sofisticação.",
-    desc2:"Ideal para ocasiões especiais, com sandálias delicadas e acessórios discretos para um visual elegante e atemporal." },
-  { id:"mare", name:"Blusa Maré", price:"R$ 179,00", color:"Marfim", sizes:["P","M","G"],
-    img:BASE+"images/look-ivory.jpg", cat:"Blusas", badge:"",
-    desc:"Blusa marfim com mangas delicadas, leve e versátil. Combina com saia oliva para um look editorial.",
-    desc2:"Perfeita do cotidiano aos encontros especiais, com toque fresco e elegante." }
-];
-
-/* Galeria: coloque suas fotos em images/galeria-1.jpg ... galeria-6.jpg (ou troque os links) */
-const FALLBACKS = [BASE+"images/look-ivory.jpg", BASE+"images/hero-fashion.jpg", BASE+"images/encanto-de-oliva.png"];
-const GALLERY = [
-  { src:"images/galeria-1.jpg", name:"Verão em detalhes", desc:"Acessórios naturais e tons terrosos para um dia leve." },
-  { src:"images/galeria-2.jpg", name:"Frescor tropical", desc:"Chapéu de palha, folhas e uma pele iluminada pelo sol." },
-  { src:"images/galeria-3.jpg", name:"Look dourado", desc:"Blusa listrada em tom mel com calça pantalona marfim." },
-  { src:"images/galeria-4.jpg", name:"Azul que dança", desc:"Listras azuis e movimento para dias de brisa." },
-  { src:"images/galeria-5.jpg", name:"Branco atemporal", desc:"Vestido marfim bordado, simples e sofisticado." },
-  { src:"images/galeria-6.jpg", name:"Cores da feira", desc:"Estampas vivas e cestos de palha para o verão." }
-];
+const INSTAGRAM_USER = "use_delascarioca";   // Instagram da loja (sem o @)
+/* Os dados vêm do HTML: edite as fotos, nomes e preços direto nos <article class="card"> e nos <button> da galeria */
+const PRODUCTS = [...document.querySelectorAll("#grid .card")].map(el=>({
+  id:el.dataset.id, name:el.querySelector("h3").textContent, price:el.dataset.price, color:el.dataset.color,
+  sizes:el.dataset.sizes.split(","), img:el.querySelector(".ph img").getAttribute("src"), cat:el.dataset.cat,
+  desc:el.dataset.desc, desc2:el.dataset.desc2 }));
+const GALLERY = [...document.querySelectorAll("#gallery button")].map(b=>({
+  name:b.dataset.n, desc:b.dataset.desc, src:b.querySelector("img").getAttribute("src") }));
 
 /* ====== UTILS ====== */
 const $ = (s, el=document) => el.querySelector(s);
@@ -422,20 +445,11 @@ function toast(msg){
 /* ====== CARDS ====== */
 const grid = $("#grid");
 function renderCards(){
-  grid.innerHTML = PRODUCTS.map((p,i)=>`
-    <article class="card" data-i="${i}" tabindex="0" role="button" aria-label="Ver ${p.name}">
-      <div class="ph">
-        ${p.badge ? `<span class="badge">${p.badge}</span>` : ""}
-        <button class="heart ${favs.includes(p.id)?'on':''}" data-fav="${p.id}" aria-label="Favoritar ${p.name}" aria-pressed="${favs.includes(p.id)}">${ICON("heart")}</button>
-        <img src="${p.img}" alt="${p.name}" loading="lazy">
-        <div class="discover">Descubra a peça ${ICON("arrow")}</div>
-      </div>
-      <div class="info">
-        <h3>${p.name}</h3>
-        <div class="row"><span>${p.color}</span><span class="price">${p.price}</span></div>
-        <div class="row2"><span>${p.sizes.join(" / ")}</span><span class="ver">Ver peça ${ICON("chev")}</span></div>
-      </div>
-    </article>`).join("");
+  document.querySelectorAll("#grid .card").forEach((card,i)=>{
+    card.dataset.i = i;
+    const on = favs.includes(card.dataset.id), h = card.querySelector(".heart");
+    h.classList.toggle("on", on); h.setAttribute("aria-pressed", on);
+  });
   updateCount();
 }
 function updateCount(){
@@ -472,15 +486,7 @@ grid.addEventListener("keydown", e=>{
 });
 
 /* ====== GALERIA ====== */
-const gal = $("#gallery");
-GALLERY.forEach((g,i)=>{
-  const b = document.createElement("button");
-  b.setAttribute("aria-label", "Ampliar: "+g.name);
-  b.innerHTML = `<img src="${g.src}" alt="${g.name}" loading="lazy"><span class="zoom">${ICON("plus")}</span>`;
-  b.querySelector("img").onerror = function(){ this.onerror=null; this.src = FALLBACKS[i % FALLBACKS.length]; };
-  b.onclick = ()=>openItem("g", i);
-  gal.appendChild(b);
-});
+document.querySelectorAll("#gallery button").forEach((b,i)=>{ b.onclick = ()=>openItem("g", i); });
 
 /* ====== MODAL ====== */
 const modal = $("#modal");
