@@ -66,7 +66,7 @@ nav a:hover,nav a.active{border-color:var(--olive)}
 .searchbar{max-height:0;overflow:hidden;transition:max-height .3s;border-bottom:1px solid transparent}
 .searchbar.open{max-height:70px;border-color:var(--line)}
 .searchbar input{width:min(1120px,90%);display:block;margin:0 auto;height:56px;border:0;background:transparent;font:inherit;font-size:.95rem;outline:none;color:var(--ink)}
-@media(max-width:700px){nav{display:none}.logo .txt b{font-size:1.7rem}}
+@media(max-width:860px){.logo .txt b{font-size:1.7rem}}
 
 /* Hero */
 .hero{position:relative;background:var(--forest);overflow:hidden}
@@ -74,7 +74,7 @@ nav a:hover,nav a.active{border-color:var(--olive)}
 @keyframes heroIn{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:none}}
 .hero .cta{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:2.2rem;background:var(--gold);color:var(--olive);font-size:.74rem;font-weight:500;padding:1.05rem 1.9rem;transition:background .25s,transform .25s;white-space:nowrap}
 .hero .cta:hover{background:#f0dcae;transform:translateX(-50%) translateY(-2px)}
-@media(max-width:700px){.hero img{height:auto;min-height:0;aspect-ratio:auto}.hero .cta{position:static;transform:none;display:flex;justify-content:space-between;margin:0;border-radius:0}.hero .cta:hover{transform:none}}
+
 
 /* Faixa de valores */
 .values{background:var(--ivory-2);border-bottom:1px solid var(--line)}
@@ -214,6 +214,103 @@ footer li.soft{font-weight:400;color:#c9d0b3;font-size:.62rem}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 body.lock{overflow:hidden}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* ===== MOBILE / TOQUE ===== */
+:root{--hero-pos:50% 30%} /* ajuste aqui o foco da foto principal no celular (ex.: 70% 30% = mais para a direita) */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-x:clip}
+a,button,.card{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+#colecao,#essencia,#contato{scroll-margin-top:84px}
+.tools .menu-btn{display:none}
+@media(hover:none){.card:hover .ph img,.gallery button:hover img{transform:none}.heart:hover{transform:none}.gallery .zoom{opacity:1;width:28px;height:28px}}
+
+@media(max-width:860px){
+  .tools .menu-btn{display:flex}
+  nav{position:absolute;left:0;right:0;top:100%;background:var(--ivory);border-bottom:1px solid var(--line);box-shadow:0 18px 30px rgba(40,50,30,.12);max-height:0;overflow:hidden;visibility:hidden;transition:max-height .35s ease,visibility .35s}
+  nav.open{max-height:360px;visibility:visible}
+  nav ul{flex-direction:column;gap:0;width:min(1120px,90%);margin:0 auto;padding:.3rem 0 .8rem}
+  nav a{display:flex;align-items:center;min-height:54px;padding:0;font-family:var(--serif);font-size:1.4rem;border-bottom:1px solid var(--line)}
+  nav a:hover,nav a.active{border-color:var(--line);color:var(--olive)}
+  nav li:last-child a,nav li:last-child a:hover,nav li:last-child a.active{border-bottom-color:transparent}
+  nav a.active::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold-deep);margin-left:.7rem}
+  .tools{gap:.1rem;margin-right:-.6rem;font-size:1.3rem}
+  .tools button{width:44px;height:44px;justify-content:center;align-items:center}
+  .tools .count{top:4px;right:2px}
+}
+
+@media(max-width:700px){
+  .topbar{font-size:.72rem}
+  .topbar .container{height:auto;min-height:30px;padding:.35rem 0;text-align:center}
+  .nav{height:64px}
+  .logo .palm{width:26px;height:30px}
+  .searchbar input{font-size:16px;height:52px}
+  .eyebrow{font-size:.74rem;letter-spacing:.2em}
+  .hero img{height:clamp(320px,60vh,520px);height:clamp(320px,60svh,520px);object-position:var(--hero-pos)}
+  .hero .cta{position:static;transform:none;display:flex;justify-content:space-between;gap:1rem;margin:0;padding:1.15rem 1.25rem;font-size:.86rem;white-space:normal}
+  .hero .cta:hover{transform:none}
+  .values .container{grid-template-columns:1fr;height:auto;padding:.3rem 0;gap:0}
+  .values .v{height:auto;min-height:48px;font-size:.84rem;justify-content:flex-start;padding:0 .2rem}
+  .values .v+.v{border-left:0;border-top:1px solid var(--line)}
+  .section{padding:3.2rem 0 1.5rem}
+  .head{margin-bottom:1.6rem;gap:1.1rem}
+  .head p{font-size:.9rem}
+  .linkbtn{font-size:.84rem;min-height:44px}
+  .grid{gap:2.2rem;max-width:440px;margin-inline:auto}
+  .badge{font-size:.64rem;padding:.4rem .65rem}
+  .heart{width:44px;height:44px;top:.6rem;right:.6rem;font-size:1.2rem}
+  .discover{font-size:.82rem;padding:.9rem}
+  .card .info{padding:1.1rem .25rem 0}
+  .card h3{font-size:1.6rem}
+  .card .row{font-size:.86rem;flex-wrap:wrap}
+  .card .row .price{text-align:right}
+  .card .row2{font-size:.8rem;padding-top:.8rem}
+  .callout{padding:2rem 0 1.4rem}
+  .callout .container{flex-direction:column;align-items:stretch;text-align:center;gap:1rem}
+  .callout p{font-size:.92rem}
+  .outline{justify-content:center;gap:.9rem;min-height:50px;font-size:.86rem;padding:.9rem 1.2rem}
+  .gallery{gap:8px;padding:8px}
+  .gallery .cap{position:static;grid-column:1/-1;order:-1;background:none;padding:.5rem .3rem .2rem;font-size:.68rem}
+  .gallery .wide{aspect-ratio:16/10;min-height:0}
+  .essence{padding:3rem 1.5rem 3.2rem}
+  .essence p{font-size:.96rem;max-width:none}
+  .essence .linkbtn{font-size:.88rem}
+  .quote{padding:3.2rem 1.4rem 3.6rem}
+  .quote .script{font-size:1.5rem}
+  .contact .container{flex-direction:column;align-items:stretch;padding:2rem 0;gap:1.3rem}
+  .contact .outline{width:100%}
+  footer{padding:2.6rem 0 6rem}
+  .fgrid{grid-template-columns:1fr 1fr;gap:1.8rem 1.2rem}
+  .fgrid>div:first-child{grid-column:1/-1}
+  footer .tag{font-size:.86rem}
+  footer h4{font-size:.68rem}
+  footer ul{font-size:.86rem;gap:.3rem}
+  footer ul a{min-height:40px}
+  footer li.soft{font-size:.8rem}
+  .copy{font-size:.74rem;flex-direction:column;align-items:center;text-align:center;gap:.4rem}
+  .toast{bottom:92px;font-size:.86rem;text-align:center;width:max-content}
+}
+@media(max-width:720px){
+  .modal{align-items:end;padding:0}
+  .dialog{width:100%;max-height:92vh;max-height:92dvh;border-radius:18px 18px 0 0;transform:translateY(40px);overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+  .dialog .pic{aspect-ratio:auto;height:min(46vh,380px);height:min(42dvh,380px)}
+  .dialog .txt{padding:1.4rem 1.3rem calc(1.6rem + env(safe-area-inset-bottom,0px))}
+  .dialog h3{font-size:2rem}
+  .dialog .crumb{font-size:.7rem}
+  .dialog .desc{font-size:.92rem;margin-top:1.2rem}
+  .dialog .desc2{font-size:.85rem}
+  .dialog .sizes-wrap label{font-size:.82rem}
+  .sizes button{width:48px;height:44px;font-size:.84rem}
+  .dialog .buy{height:54px;font-size:.84rem}
+  .dialog .note{font-size:.72rem}
+  .dialog .nav2 button{font-size:.84rem;min-height:44px}
+  .close{width:44px;height:44px;top:.7rem;right:.7rem}
+}
+@media(max-width:380px){
+  .fgrid{grid-template-columns:1fr}
+  .logo .txt b{font-size:1.5rem}
+  .head h2{font-size:2.1rem}
+}
+@media(max-height:500px) and (orientation:landscape){.nav{height:54px}.hero img{height:clamp(240px,70vh,400px)}}
 </style>
 </head>
 <body>
@@ -231,6 +328,7 @@ body.lock{overflow:hidden}
   <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3c.6 4.800 2.200 6.400 7 7-4.800.6-6.400 2.200-7 7-.6-4.800-2.200-6.400-7-7 4.800-.6 6.400-2.200 7-7Z"/><path d="M19 15v4M17 17h4"/></symbol>
   <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.500" y="3.500" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.200" cy="6.800" r=".6" fill="currentColor"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
   <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
 </svg>
@@ -243,7 +341,7 @@ body.lock{overflow:hidden}
       <svg class="palm" style="stroke:none"><use href="#i-palm"/></svg>
       <span class="txt"><b>delas</b><small>CARIOCA</small></span>
     </a>
-    <nav aria-label="Principal">
+    <nav id="mainNav" aria-label="Principal">
       <ul>
         <li><a href="#inicio" class="active" data-nav>Início</a></li>
         <li><a href="#colecao" data-nav>Coleção</a></li>
@@ -254,6 +352,7 @@ body.lock{overflow:hidden}
     <div class="tools">
       <button id="btnSearch" aria-label="Buscar peças"><svg class="ico"><use href="#i-search"/></svg></button>
       <button id="btnFavs" aria-label="Ver favoritos"><svg class="ico"><use href="#i-heart"/></svg><span class="count" id="favCount">0</span></button>
+      <button class="menu-btn" id="btnMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav"><svg class="ico"><use href="#i-menu"/></svg></button>
     </div>
   </div>
   <div class="searchbar" id="searchbar"><input id="searchInput" type="search" placeholder="Buscar por nome ou cor…" aria-label="Buscar peças"></div>
@@ -566,6 +665,7 @@ $("#mBuy").addEventListener("click", e=>{
 const header = $("#header");
 addEventListener("scroll", ()=>header.classList.toggle("scrolled", scrollY>10), {passive:true});
 $("#btnSearch").onclick = ()=>{
+  setMenu(false);
   const bar = $("#searchbar"); bar.classList.toggle("open");
   if(bar.classList.contains("open")){ $("#searchInput").focus(); document.getElementById("colecao").scrollIntoView({behavior:"smooth"}); }
   else { $("#searchInput").value = ""; applyFilter(); }
@@ -577,6 +677,27 @@ $("#btnFavs").onclick = ()=>{
   document.getElementById("colecao").scrollIntoView({behavior:"smooth"});
 };
 $("#linkAll").addEventListener("click", ()=>{ onlyFavs = false; $("#searchInput").value=""; applyFilter(); });
+
+/* Menu mobile */
+const navEl = $("#mainNav"), btnMenu = $("#btnMenu");
+function setMenu(open){
+  navEl.classList.toggle("open", open); btnMenu.setAttribute("aria-expanded", open);
+  btnMenu.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+  btnMenu.innerHTML = ICON(open ? "x" : "menu");
+}
+btnMenu.onclick = e=>{ e.stopPropagation(); const open = !navEl.classList.contains("open"); if(open) $("#searchbar").classList.remove("open"); setMenu(open); };
+navEl.addEventListener("click", e=>{ if(e.target.closest("a")) setMenu(false); });
+document.addEventListener("click", e=>{ if(navEl.classList.contains("open") && !e.target.closest("header")) setMenu(false); });
+addEventListener("keydown", e=>{ if(e.key==="Escape") setMenu(false); });
+matchMedia("(min-width:861px)").addEventListener("change", e=>{ if(e.matches) setMenu(false); });
+
+/* Deslizar a foto no modal para trocar de peça */
+let tx=0, ty=0; const pic = $(".dialog .pic");
+pic.addEventListener("touchstart", e=>{ tx=e.touches[0].clientX; ty=e.touches[0].clientY; }, {passive:true});
+pic.addEventListener("touchend", e=>{
+  const dx=e.changedTouches[0].clientX-tx, dy=e.changedTouches[0].clientY-ty;
+  if(Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)*1.5) step(dx<0?1:-1);
+}, {passive:true});
 
 /* Link ativo do menu */
 const secs = ["inicio","colecao","essencia","contato"].map(id=>document.getElementById(id));
