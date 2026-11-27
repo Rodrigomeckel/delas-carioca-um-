@@ -216,7 +216,6 @@ body.lock{overflow:hidden}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 /* ===== MOBILE / TOQUE ===== */
-:root{--hero-pos:50% 30%} /* ajuste aqui o foco da foto principal no celular (ex.: 70% 30% = mais para a direita) */
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{overflow-x:clip}
 a,button,.card{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
@@ -245,7 +244,7 @@ a,button,.card{-webkit-tap-highlight-color:transparent;touch-action:manipulation
   .logo .palm{width:26px;height:30px}
   .searchbar input{font-size:16px;height:52px}
   .eyebrow{font-size:.74rem;letter-spacing:.2em}
-  .hero img{height:clamp(320px,60vh,520px);height:clamp(320px,60svh,520px);object-position:var(--hero-pos)}
+  .hero img{height:auto;aspect-ratio:auto;object-fit:contain}
   .hero .cta{position:static;transform:none;display:flex;justify-content:space-between;gap:1rem;margin:0;padding:1.15rem 1.25rem;font-size:.86rem;white-space:normal}
   .hero .cta:hover{transform:none}
   .values .container{grid-template-columns:1fr;height:auto;padding:.3rem 0;gap:0}
